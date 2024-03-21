@@ -983,7 +983,7 @@ figure.effect-bubba:hover p {
     width: 25%;
   }
   .grid-item figure figcaption {
-    padding: 1em;
+    padding: 1.5em;
   }
 }
 
@@ -1049,7 +1049,7 @@ figure.effect-bubba:hover p {
     font-size: 1em;
   }
   .grid-item figure figcaption {
-    padding: 2em 1em;
+    padding: 2em;
   }
 }
 
@@ -1091,8 +1091,23 @@ figure.effect-bubba:hover p {
 }
 
 .cd-hero-slider h2.tm-figure-title {
-  white-space: nowrap;
   font-weight: 300;
+}
+.cd-hero-slider p.tm-figure-description {
+  display: none;
+}
+.cd-hero-slider {
+  margin: 0 -15px;
+}
+@media only screen and (min-width: 480px) {
+  .cd-hero-slider {
+    margin: 0 -50px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-hero-slider p.tm-figure-description {
+    display: block;
+  }
 }
 @media only screen and (min-width: 1360px) {
   .cd-hero-slider {
