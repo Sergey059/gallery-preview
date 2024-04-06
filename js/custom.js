@@ -11,6 +11,7 @@
 
   $(window).on("beforeunload", function () {
     $("#navbar").hide();
+    console.log("Меню скрыто");
   });
 
   /* ==============================================
