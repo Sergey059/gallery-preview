@@ -2674,7 +2674,7 @@ select.mobile-device {
 .support-info .info-title span {
   display: block;
   font-size: 13px;
-  text-transform: capitalize;
+  text-transform: inherit;
   color: #aaa;
   font-weight: 400;
 }

