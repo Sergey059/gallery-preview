@@ -180,9 +180,4 @@
       transition: "all .3s",
     });
   });
-
-  // Обработка события закрытия меню при перходе на кнопку назад
-  $(window).on("beforeunload", function () {
-    $("#navbar").hide();
-  });
 })(jQuery);
